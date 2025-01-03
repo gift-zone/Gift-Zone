@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftZone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1b2838;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #3a4752;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container h2 {
+            width: 100%;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            width: 30%;
+            max-width: 300px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            color: #555;
+        }
+
+        .hero {
+            background-color: #3a4752;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background-image: url('perfil.jpg'); /* Imagen de fondo representativa */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #000000; /* Texto más oscuro para mejor visibilidad */
+            text-shadow: 1px 1px 3px rgba(157, 153, 153, 0.6); /* Sombra para mejorar la visibilidad */
+        }
+
+        .hero button {
+            padding: 1rem 2rem;
+            background-color: #1b2838;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #4a6573;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección de inicio -->
+    <div class="hero">
+        <h1>¡Bienvenido a GiftZone!</h1>
+        <p>Nos emociona que estés aquí. Estás a punto de descubrir un mundo lleno de tarjetas de regalo increíbles, perfectas para tus juegos favoritos y mucho más. Explora nuestro catálogo exclusivo y encuentra la tarjeta ideal para ti o para sorprender a esa persona especial. ¡Es hora de comenzar una nueva aventura!</p>
+        <button onclick="scrollToContent()">Comienza a Explorar</button>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a data-category="steam">Steam</a>
+        <a data-category="xbox">Xbox</a>
+        <a data-category="PlayStation">PlayStation</a>
+        <a data-category="Riot Games">Riot Games</a>
+        <a data-category="Battle.Net">Battle.Net</a>
+        <a data-category="Nintendo">Nintendo</a>
+        <a data-category="G2A">G2A</a>
+        <a data-category="Fortnite">Fortnite</a>
+        <a data-category="Free Fire">Free Fire</a>
+        <a data-category="Pubg">Pubg</a>
+    </nav>
+
+    <!-- Sección de tarjetas -->
+    <div class="container" id="steam" style="display:none;">
+        <h2>Steam Gift Cards</h2>
+        <div class="card">
+            <img src="steam-5-usd.jpg" alt="Steam Gift Card $5">
+            <h3>Steam Gift Card $5</h3>
+            <p>Precio: $7000 ARS</p>
+            
+            <button>Comprar Ahora</button>
+        </div>
+
+        <div class="card">
+            <img src="10.webp" alt="Steam Gift Card $10">
+            <h3>Steam Gift Card $10</h3>
+            <p>Precio: $13500 ARS</p>
+           
+            <button>Comprar Ahora</button>
+        </div>
+
+        <div class="card">
+            <img src="steam-20-usd.jpg" alt="Steam Gift Card $20">
+            <h3>Steam Gift Card $20</h3>
+            <p>Precio: $26500 ARS</p>
+            
+            <button>Comprar Ahora</button>
+        </div>
+
+        <div class="card">
+            <img src="steam-50-usd.jpg" alt="Steam Gift Card $50">
+            <h3>Steam Gift Card $50</h3>
+            <p>Precio: $64500</p>
+            <a href="https://mpago.la/1Nm9gzv" target="_blank">
+                <button>Comprar Ahora</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="STEAM-100-USD.png" alt="Steam Gift Card $100">
+            <h3>Steam Gift Card $100</h3>
+            <p>Precio: $128000</p>
+            <button>Comprar Ahora</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 GiftZone. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function scrollToContent() {
+            window.scrollTo({ top: document.querySelector('.container').offsetTop, behavior: 'smooth' });
+            document.querySelector('.hero').style.display = 'none'; // Oculta la sección de bienvenida al hacer clic
+        }
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", function() {
+                // Ocultar todas las secciones
+                document.querySelectorAll(".container").forEach(container => {
+                    container.style.display = "none"; // Oculta la sección
+                });
+    
+                // Mostrar la sección seleccionada
+                const category = this.getAttribute("data-category");
+                const activeSection = document.getElementById(category);
+                if (activeSection) {
+                    activeSection.style.display = "flex"; // Muestra la sección seleccionada
+                }
+            });
+        });
+
+        // Mostrar la primera categoría por defecto
+        document.querySelector(".container").style.display = "flex";
+    </script>
+</body>
+</html>
