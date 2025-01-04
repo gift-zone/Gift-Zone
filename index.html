@@ -366,7 +366,7 @@
 
             for (const [method, link] of Object.entries(paymentLinks)) {
                 const img = document.createElement('img');
-                img.src = method.toLowerCase() + '.jpg'; // Imagen de pago con el nombre del método
+                img.src = method.toLowerCase() + '.png'; // Imagen de pago con el nombre del método
                 img.alt = method;
                 img.onclick = () => { window.location.href = link; };
                 methodsContainer.appendChild(img);
